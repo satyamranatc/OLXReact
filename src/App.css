@@ -1,42 +1,61 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+#HomeNav
+{
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#HomeNav ul
+{
+  display: flex;
+  align-items: center;
+  list-style: none;
+
+  column-gap: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#HomeNav ul li
+{
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+
+#SearchBar
+{
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.card {
-  padding: 2em;
+#SearchBar input 
+{
+  width: 100%;
+  padding: .8rem 1.4rem;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  border: 1px solid gray;
+  color: black;
+  background-color: whitesmoke;
+  padding-right: 50px;
 }
 
-.read-the-docs {
-  color: #888;
+#SearchBar input::placeholder
+{
+  color: rgb(48, 47, 47);
+}
+
+#SearchBar img
+{
+  position: absolute;
+  right: 10px;
+  height: 30px;
+  top: 20px;
 }

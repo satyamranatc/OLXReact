@@ -1,0 +1,142 @@
+[
+    {
+      "file": "https://placehold.co/600x400",
+      "productName": "Wireless Headphones",
+      "productPrice": 99.99,
+      "purchaseDate": "2023-05-15",
+      "category": "Electronics"
+    },
+    {
+      "file": "https://placehold.co/600x400",
+      "productName": "Leather Briefcase",
+      "productPrice": 149.5,
+      "purchaseDate": "2023-04-22",
+      "category": "Accessories"
+    },
+    {
+      "file": "https://placehold.co/600x400",
+      "productName": "Yoga Mat",
+      "productPrice": 24.99,
+      "purchaseDate": "2023-06-01",
+      "category": "Fitness"
+    },
+    {
+      "file": "https://placehold.co/600x400",
+      "productName": "Bluetooth Speaker",
+      "productPrice": 59.99,
+      "purchaseDate": "2023-03-10",
+      "category": "Electronics"
+    },
+    {
+      "file": "https://placehold.co/600x400",
+      "productName": "Noise-Cancelling Headphones",
+      "productPrice": 199.99,
+      "purchaseDate": "2023-02-28",
+      "category": "Electronics"
+    },
+    {
+      "file": "https://placehold.co/600x400",
+      "productName": "Smartwatch",
+      "productPrice": 149.99,
+      "purchaseDate": "2023-05-05",
+      "category": "Electronics"
+    },
+    {
+      "file": "https://placehold.co/600x400",
+      "productName": "Leather Jacket",
+      "productPrice": 249.99,
+      "purchaseDate": "2023-04-18",
+      "category": "Fashion"
+    },
+    {
+      "file": "https://placehold.co/600x400",
+      "productName": "Fitness Tracker",
+      "productPrice": 79.99,
+      "purchaseDate": "2023-03-25",
+      "category": "Fitness"
+    },
+    {
+      "file": "https://placehold.co/600x400",
+      "productName": "External Hard Drive",
+      "productPrice": 69.99,
+      "purchaseDate": "2023-06-02",
+      "category": "Electronics"
+    },
+    {
+      "file": "https://placehold.co/600x400",
+      "productName": "DSLR Camera",
+      "productPrice": 799.99,
+      "purchaseDate": "2023-04-10",
+      "category": "Electronics"
+    },
+    {
+      "file": "https://placehold.co/600x400",
+      "productName": "Backpack",
+      "productPrice": 59.99,
+      "purchaseDate": "2023-05-20",
+      "category": "Accessories"
+    },
+    {
+      "file": "https://placehold.co/600x400",
+      "productName": "Wireless Mouse",
+      "productPrice": 24.99,
+      "purchaseDate": "2023-03-15",
+      "category": "Electronics"
+    },
+    {
+      "file": "https://placehold.co/600x400",
+      "productName": "Sunglasses",
+      "productPrice": 89.99,
+      "purchaseDate": "2023-06-03",
+      "category": "Accessories"
+    },
+    {
+      "file": "https://placehold.co/600x400",
+      "productName": "Laptop",
+      "productPrice": 1099.99,
+      "purchaseDate": "2023-04-05",
+      "category": "Electronics"
+    },
+    {
+      "file": "https://placehold.co/600x400",
+      "productName": "Hiking Boots",
+      "productPrice": 129.99,
+      "purchaseDate": "2023-05-12",
+      "category": "Outdoor"
+    },
+    {
+      "file": "https://placehold.co/600x400",
+      "productName": "Wireless Keyboard",
+      "productPrice": 39.99,
+      "purchaseDate": "2023-03-28",
+      "category": "Electronics"
+    },
+    {
+      "file": "https://placehold.co/600x400",
+      "productName": "Smartwatch",
+      "productPrice": 199.99,
+      "purchaseDate": "2023-06-01",
+      "category": "Electronics"
+    },
+    {
+      "file": "https://placehold.co/600x400",
+      "productName": "Wireless Charger",
+      "productPrice": 29.99,
+      "purchaseDate": "2023-04-25",
+      "category": "Electronics"
+    },
+    {
+      "file": "https://placehold.co/600x400",
+      "productName": "Messenger Bag",
+      "productPrice": 79.99,
+      "purchaseDate": "2023-05-08",
+      "category": "Accessories"
+    },
+    {
+      "file": "https://placehold.co/600x400",
+      "productName": "Bluetooth Earbuds",
+      "productPrice": 49.99,
+      "purchaseDate": "2023-03-20",
+      "category": "Electronics"
+    }
+  ]

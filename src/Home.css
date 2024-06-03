@@ -1,0 +1,74 @@
+#MainContainer nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: black;
+    color: white;
+    margin-top: .5rem;
+
+}
+
+
+#ProductContainer
+{
+    min-height: 100vh;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+.Product
+{
+    height: 500px;
+    min-width: 350px;
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    /* border: 3px solid red; */
+}
+
+.Product img
+{
+    margin-top: .5rem;
+    height: 60%;
+    width: 90%;
+    object-fit: cover;
+}
+
+.ProductContent
+{
+    height: 40%;
+    color: black;
+    width: 100%;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.ProductContent h3
+{
+    font-size: 2.5rem;
+    
+}
+
+.ProductContent h2
+{
+    font-size: 2rem;
+    color: gray;
+    
+}
+
+.ProductContent h4
+{
+    font-size: 1.7rem;
+    
+}

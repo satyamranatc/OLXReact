@@ -27,6 +27,7 @@
 {
     height: 500px;
     min-width: 350px;
+    flex: 1;
     background-color: white;
     overflow: hidden;
     display: flex;

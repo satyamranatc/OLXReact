@@ -5,10 +5,12 @@ import UserLoginSection from './UserLoginSection'
 import NavBar from './NavBar'
 import Home from './Home'
 import "./App.css"
+import ProductPage from './ProductPage'
 import axios from 'axios'
 
 export default function App() {
   let [LoginSuccess, setLoginSuccess] = useState(false);
+  let [SelectedProduct, setSelectedProduct] = useState({});
   const [Produts, setProducts] = useState([]);
  useEffect(()=>{
   setProducts([
@@ -153,22 +155,22 @@ export default function App() {
       "category": "Electronics"
     }
   ])
- },[])
+},[])
 
 
 
-  function UserLogiIn(setProducts = "") {
-    return LoginSuccess ? <Admin setProducts = {setProducts} /> : <UserLoginSection setLoginSuccess={setLoginSuccess} />
-  }
-
-  return (
-    <div>
+function UserLogiIn(setProducts = "") {
+  return LoginSuccess ? <Admin setProducts = {setProducts} /> : <UserLoginSection setLoginSuccess={setLoginSuccess} />
+}
+return (
+  <div>
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path="/" element={<Home Produts = {Produts} />} />
+          <Route path="/" element={<Home setSelectedProduct = {setSelectedProduct} Produts = {Produts} />} />
           {/* <Route path="/Admin/*" element={UserLogiIn(setProducts)} /> */}
           <Route path="/Admin/*" element={<Admin Produts= {Produts}  setProducts = {setProducts}  />} />
+          <Route path="/ProductPage" element={<ProductPage SelectedProduct = {SelectedProduct} />} />
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
       </BrowserRouter>

@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./Home.css";
-export default function Home({ Produts }) {
+export default function Home({ Produts,setSelectedProduct }) {
   let [allCtaegory, setallCtaegory] = useState([]);
-  let [FilteredData, setFilteredData] = useState(Produts);
+  let [NewData, setNewData] = useState(Produts);
+
 
 
   useEffect(() => {
+    setNewData(Produts)
     console.log(Produts);
     // Find The Unique Category of All Products:
     let allCategory = [];
@@ -19,44 +21,50 @@ export default function Home({ Produts }) {
   }, [Produts]);
 
 
-  function FilterData(e) {
-    console.log(e.target.value);
-    let Choice = e.target.value;
-    if (Choice == "All Category") {
-      setFilteredData(Produts);
-      return;
-    }
-    setFilteredData(Produts.filter((e) => e.category == Choice));
+
+  function handleProductClick(e)
+  {
+    console.log(e)
+    // Open a Page with Route:
+    setSelectedProduct(e)
+    window.location.href = `/ProductPage`
   }
 
 
-  // function PriceFilter(e)
-  // {
-  //   console.log(e.target.value);
-  // }
+
+  function FilterData(e)
+  {
+    let Selected = e.target.value;
+    if (Selected == "All Category")
+    {
+      setNewData(Produts);
+      return;
+    }
+    setNewData(Produts.filter((e)=>e.category == Selected));
+  }
+
+
+
   return (
     <div id="MainContainer">
       <nav>
         <h2>All Product</h2>
         <div id="filter">
+
           <select onChange={(e) => FilterData(e)}>
             <option>All Category</option>
             {allCtaegory.map((e,i) => (
               <option key={i}>{e}</option>
             ))}
           </select>
-{/* 
-            <div id="Price">
-              <p>Price</p>
-              <input min={100} max={10000} type="range" onChange={(e)=>PriceFilter(e)} />
-            </div> */}
+
 
         </div>
       </nav>
 
       <div id="ProductContainer">
-        {FilteredData.map((e,i) => (
-          <div key={i} className="Product">
+        {NewData.map((e, i) => (
+          <div key={i} className="Product" onClick={() => handleProductClick(e)}>
             <img src={e.file} alt="" />
             <div className="ProductContent">
               <h3>{e.productName}</h3>

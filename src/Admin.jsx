@@ -12,9 +12,11 @@ export default function Admin({ Produts, setProducts }) {
       productName: e.target.productName.value,
       productPrice: e.target.productPrice.value,
       purchaseDate: e.target.purchaseDate.value,
+      category: e.target.category.value,
     };
     setProducts([...Produts, data]);
     console.log(data);
+    console.log("admin",Produts)
   };
 
   const handleImageChange = (e) => {
@@ -59,8 +61,15 @@ export default function Admin({ Produts, setProducts }) {
             placeholder="Date of Purchase" 
           />
         </div>
-        <Link to={"/"}>
-        <button type="submit">Submit</button></Link>
+        <div>
+          <input 
+            type="text" 
+            name="category" 
+            placeholder="Category" 
+          />
+        </div>
+       
+        <button type="submit">Submit</button>
       </form>
       <p>Uploaded Image</p>
       {image && <img height={100} src={image} alt="Product" style={{ marginTop: '20px', maxWidth: '100%' }} />}

@@ -2,12 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import searchIcon from './Media/search-regular-24 (3).png';
 
-export default function NavBar() {
+export default function NavBar({setSearchText}) {
   return (
     <nav id = "HomeNav">
     <h2>OLX</h2>
     <div id="SearchBar">
-      <input placeholder='Search Products....' type="text" />
+      <input onChange={(e)=>{setSearchText(e.target.value)}} placeholder='Search Products....' type="text" />
       <img src={searchIcon} alt="" />
     </div>
     <ul>

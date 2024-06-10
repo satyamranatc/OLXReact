@@ -11,6 +11,8 @@ import axios from 'axios'
 export default function App() {
   let [LoginSuccess, setLoginSuccess] = useState(false);
   let [SelectedProduct, setSelectedProduct] = useState({});
+  let [SearchFilter, setSearchFilter] = useState(SelectedProduct);
+  let [SearchText, setSearchText] = useState();
   const [Produts, setProducts] = useState([]);
  useEffect(()=>{
   setProducts([
@@ -158,6 +160,11 @@ export default function App() {
 },[])
 
 
+useEffect(()=>{  
+  // If The Len Of Search tEXT is < 0 Set to All:
+ 
+},[SearchText])
+
 
 function UserLogiIn(setProducts = "") {
   return LoginSuccess ? <Admin setProducts = {setProducts} /> : <UserLoginSection setLoginSuccess={setLoginSuccess} />
@@ -165,7 +172,7 @@ function UserLogiIn(setProducts = "") {
 return (
   <div>
       <BrowserRouter>
-        <NavBar />
+        <NavBar setSearchText = {setSearchText} />
         <Routes>
           <Route path="/" element={<Home setSelectedProduct = {setSelectedProduct} Produts = {Produts} />} />
           {/* <Route path="/Admin/*" element={UserLogiIn(setProducts)} /> */}

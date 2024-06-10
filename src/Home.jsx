@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import "./Home.css";
 export default function Home({ Produts,setSelectedProduct }) {
   let [allCtaegory, setallCtaegory] = useState([]);
   let [NewData, setNewData] = useState(Produts);
+  let navigate = useNavigate();
 
 
 
@@ -27,7 +29,8 @@ export default function Home({ Produts,setSelectedProduct }) {
     console.log(e)
     // Open a Page with Route:
     setSelectedProduct(e)
-    window.location.href = `/ProductPage`
+    navigate('/ProductPage')
+  
   }
 
 

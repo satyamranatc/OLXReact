@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import "./Home.css";
-export default function Home({ Produts,setSelectedProduct }) {
+export default function Home({ Produts,setSelectedProduct ,CartProducts, setCartProducts}) {
   let [allCtaegory, setallCtaegory] = useState([]);
   let [NewData, setNewData] = useState(Produts);
   let navigate = useNavigate();
@@ -74,6 +74,7 @@ export default function Home({ Produts,setSelectedProduct }) {
               <h4>{e.productPrice}</h4>
               <h5>{e.purchaseDate}</h5>
             </div>
+            <button onClick={()=>setCartProducts([...CartProducts,e])}>Add To Cart</button>
           </div>
         ))}
       </div>

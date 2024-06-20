@@ -13,6 +13,7 @@ export default function NavBar({setSearchText}) {
     <ul>
       <li><Link to={""} >Home</Link></li>
       <li><Link to={"/Admin"} >Add Product</Link></li>
+      <li><Link to={"/Cart"} >Cart</Link></li>
 
     </ul>
   </nav>

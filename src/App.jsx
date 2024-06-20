@@ -4,17 +4,21 @@ import Admin from './Admin'
 import UserLoginSection from './UserLoginSection'
 import NavBar from './NavBar'
 import Home from './Home'
+import Cart from './Cart/Cart.jsx'
 import "./App.css"
 import ProductPage from './ProductPage'
-import axios from 'axios'
+import axios, { all } from 'axios'
 
 export default function App() {
   let [LoginSuccess, setLoginSuccess] = useState(false);
   let [SelectedProduct, setSelectedProduct] = useState({});
   let [SearchFilter, setSearchFilter] = useState(SelectedProduct);
-  let [SearchText, setSearchText] = useState();
+  let [SearchText, setSearchText] = useState("");
   const [Produts, setProducts] = useState([]);
+  const [FilteredProducts, setFilteredProducts] = useState([]);
+  const [CartProducts, setCartProducts] = useState([]);
  useEffect(()=>{
+
   setProducts([
     {
       "file": "https://images.pexels.com/photos/47547/squirrel-animal-cute-rodents-47547.jpeg?cs=srgb&dl=pexels-pixabay-47547.jpg&fm=jpg",
@@ -157,13 +161,22 @@ export default function App() {
       "category": "Electronics"
     }
   ])
+  
+
+
 },[])
 
 
-useEffect(()=>{  
-  // If The Len Of Search tEXT is < 0 Set to All:
- 
-},[SearchText])
+useEffect(() => {
+  if (SearchText.length < 1) {
+    setFilteredProducts(Produts);
+  } else {
+    let filteredProducts = Produts.filter((product) => {
+      return product.productName.toLowerCase().includes(SearchText.toLowerCase());
+    });
+    setFilteredProducts(filteredProducts);
+  }
+}, [SearchText, Produts]);
 
 
 function UserLogiIn(setProducts = "") {
@@ -174,10 +187,11 @@ return (
       <BrowserRouter>
         <NavBar setSearchText = {setSearchText} />
         <Routes>
-          <Route path="/" element={<Home setSelectedProduct = {setSelectedProduct} Produts = {Produts} />} />
+          <Route path="/" element={<Home setSelectedProduct = {setSelectedProduct} Produts = {FilteredProducts} CartProducts = {CartProducts} setCartProducts = {setCartProducts} />} />
           {/* <Route path="/Admin/*" element={UserLogiIn(setProducts)} /> */}
           <Route path="/Admin/*" element={<Admin Produts= {Produts}  setProducts = {setProducts}  />} />
           <Route path="/ProductPage" element={<ProductPage SelectedProduct = {SelectedProduct} />} />
+          <Route path="/Cart" element={<Cart CartProducts = {CartProducts}/>} />
           <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
       </BrowserRouter>
